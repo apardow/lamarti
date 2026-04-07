@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Montserrat", sans-serif;
+  --font-editorial: "Lora", "Georgia", serif;
 
-  --color-marti-blue: #1F4E8C;
+  --color-marti-blue: #004087;
   --color-marti-red: #C62828;
-  --color-marti-orange: #F27D26; /* Warm orange accent like WVI */
-  --color-marti-black: #1A1A1A;
+  --color-marti-orange: #C62828;
+  --color-marti-black: #010006;
   --color-marti-gray: #F8F9FA;
-  --color-marti-warm: #FFF9F5; /* Warm background tint */
+  --color-marti-warm: #FFF5F5;
 }
 
 @layer base {

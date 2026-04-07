@@ -1,13 +1,59 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <meta name="description" content="Corporación José Martí de Concepción, Chile. Solidaridad internacionalista, formación política y cultura latinoamericana desde 1990." />
+    <meta name="theme-color" content="#004087" />
+    <meta name="author" content="Corporación José Martí" />
+    <meta name="robots" content="index, follow" />
+
+    <title>Corporación José Martí · Concepción, Chile</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo/lamarti.png" />
+    <link rel="apple-touch-icon" href="/images/logo/lamarti.png" />
+
+    <!-- Preconnect Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Open Graph (defaults, overridden per page by react-helmet-async) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Corporación José Martí" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:title" content="Corporación José Martí · Concepción, Chile" />
+    <meta property="og:description" content="Solidaridad internacionalista, formación política y cultura latinoamericana desde 1990." />
+    <meta property="og:image" content="https://lamarti.cl/images/logo/lamarti.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Corporación José Martí · Concepción, Chile" />
+    <meta name="twitter:description" content="Solidaridad internacionalista, formación política y cultura latinoamericana desde 1990." />
+    <meta name="twitter:image" content="https://lamarti.cl/images/logo/lamarti.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Corporación José Martí",
+      "alternateName": "La Martí Concepción",
+      "url": "https://lamarti.cl",
+      "logo": "https://lamarti.cl/images/logo/lamarti.png",
+      "foundingDate": "1990-07",
+      "description": "Organización de solidaridad internacionalista, formación política y cultura latinoamericana en Concepción, Chile.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Concepción",
+        "addressCountry": "CL"
+      },
+      "sameAs": []
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
