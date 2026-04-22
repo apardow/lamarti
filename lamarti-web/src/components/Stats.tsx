@@ -1,5 +1,5 @@
 const stats = [
-  { label: "Años de Historia", value: "34" },
+  { label: "Años de Historia", value: "36" },
   { label: "Proyectos Activos", value: "12" },
   { label: "Voluntarios", value: "150+" },
   { label: "Vidas Impactadas", value: "5k+" },

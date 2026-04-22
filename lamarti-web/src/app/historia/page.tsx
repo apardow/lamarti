@@ -41,12 +41,12 @@ export default function HistoriaPage() {
       <section className="py-20 md:py-28 bg-marti-warm">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-extrabold text-marti-black mb-10 leading-tight">
-            Más de Cuatro Décadas{" "}
+            Más de Tres Décadas{" "}
             <span className="text-marti-red">de Solidaridad</span>
           </h2>
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
             <p>
-              La trayectoria de nuestra organización abarca más de 40 años de
+              La trayectoria de nuestra organización abarca más de tres décadas de
               labor ininterrumpida, marcada por cientos de actividades en
               diversos espacios y tiempos. Aunque nuestras raíces son profundas,
               el hito fundacional se sitúa en{" "}
