@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { getHitos } from "@/lib/wp/hitos";
-import HitoTimelineItem from "@/components/wp/HitoTimelineItem";
+import { getAllHitos, agruparHitosPorAnio } from "@/lib/wp/hitos";
+import CronologiaAccordion from "@/components/wp/CronologiaAccordion";
 
 export const revalidate = 3600;
 
@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default async function CronologiaPage() {
-  const hitos = await getHitos();
+  const hitos = await getAllHitos();
+  const hitosPorAnio = agruparHitosPorAnio(hitos);
 
   return (
     <>
@@ -28,27 +29,9 @@ export default async function CronologiaPage() {
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="py-16 bg-marti-gray">
         <div className="max-w-5xl mx-auto px-4">
-          {hitos.length === 0 ? (
-            <p className="text-center text-gray-500 text-lg py-20">
-              No hay hitos registrados aún.
-            </p>
-          ) : (
-            <div className="relative">
-              {/* Vertical line - desktop */}
-              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-marti-blue/20 -translate-x-1/2" />
-              {/* Vertical line - mobile */}
-              <div className="md:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-marti-blue/20" />
-
-              <div className="space-y-12">
-                {hitos.map((hito, index) => (
-                  <HitoTimelineItem key={hito.id} hito={hito} index={index} />
-                ))}
-              </div>
-            </div>
-          )}
+          <CronologiaAccordion data={hitosPorAnio} />
         </div>
       </section>
     </>

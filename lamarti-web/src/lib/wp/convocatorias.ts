@@ -15,7 +15,15 @@ export async function getConvocatorias(): Promise<Convocatoria[]> {
     },
   });
 
-  const convocatorias = raw.map(mapConvocatoria);
+  // Defensa: descarta items con fecha_evento ACF inválida (p. ej. "null") para no
+  // romper la build estática. La fuente del dato debe corregirse en WP.
+  const convocatorias = raw.flatMap((r) => {
+    try {
+      return [mapConvocatoria(r)];
+    } catch {
+      return [];
+    }
+  });
 
   // Vigentes primero (por fechaEvento asc), finalizadas después (por fechaEvento desc)
   const vigentes = convocatorias
@@ -42,7 +50,11 @@ export async function getConvocatoriaBySlug(
   });
 
   if (raw.length === 0) return null;
-  return mapConvocatoria(raw[0]);
+  try {
+    return mapConvocatoria(raw[0]);
+  } catch {
+    return null;
+  }
 }
 
 export async function getAllConvocatoriaSlugs(): Promise<string[]> {
