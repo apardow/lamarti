@@ -68,7 +68,12 @@ const orgJsonLd = {
     addressRegion: "Biobío",
     addressCountry: "CL",
   },
-  sameAs: [],
+  telephone: "+56987540885",
+  sameAs: [
+    "https://www.facebook.com/people/Asociaci%C3%B3n-Jos%C3%A9-Mart%C3%AD/100066411169767/",
+    "https://www.instagram.com/asociacion.josemarti/",
+    "https://www.youtube.com/@asociacionjosemarti2412",
+  ],
 };
 
 export default function RootLayout({
